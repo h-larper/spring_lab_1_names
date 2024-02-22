@@ -15,7 +15,7 @@ public class Task01Controller {
     @GetMapping
     public String newGreeting(@RequestParam(value = "timeOfDay", defaultValue = "Day") String timeOfDay){
         Greeting greet = new Greeting("Howard", timeOfDay);
-        return "Good" + " " + greet.getTimeOfDay() + " " + greet.getName() + "!";
+        return "Good" + " " + timeOfDay + " " + greet.getName() + "!";
     }
 
     // ORIGINAL MVP SOLUTION:
