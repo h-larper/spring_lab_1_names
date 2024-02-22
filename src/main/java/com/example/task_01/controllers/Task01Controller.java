@@ -1,6 +1,7 @@
 package com.example.task_01.controllers;
 
 
+import com.example.task_01.models.Celebration;
 import com.example.task_01.models.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,4 +24,11 @@ public class Task01Controller {
 //        return "Good" + " " + greet.getTimeOfDay() + " " + greet.getName() + "!";
 //    }
 
+
+    @GetMapping("/summer")
+    public String newCelebration() {
+        Celebration celebration = new Celebration();
+        return "Woohoo Summer";
+    }
 }
+
